@@ -62,7 +62,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     func mapView(mapView: MGLMapView, imageForAnnotation annotation: MGLAnnotation) -> MGLAnnotationImage? {
         
         let number = Int(annotation.title!!)!
-        let annotationImage = annotationCGImageForNumberedMarker(number)
+        let annotationImage = annotationUIImageForNumberedMarker(number)
         return MGLAnnotationImage(image: annotationImage, reuseIdentifier: "\(number)")
     }
     
